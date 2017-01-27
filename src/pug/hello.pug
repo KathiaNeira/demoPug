@@ -1,31 +1,10 @@
-//- creando variables
-- var items = ['1', '2', '3', '4', '5', '6'];
-- var link = "https://github.com/pugjs/pug"
-
-//- creando mixin
-mixin grilla(content)
-  div.bg-grilla(class="color")= content
 doctype html
 html
   head
     link(rel="stylesheet" href="../src/css/style.css")
     meta(charset="UTF-8")
   body
-    //- include /pug/head.pug
-    header.b-header
-      a(href="" class="b-logo"): img(src="https://avatars2.githubusercontent.com/u/9338635?v=3&s=200")
-
-    section: .b-info:  p.e-description Este proyecto era conocida anteriormente como "Jade". Sin embargo, se ha revelado que "Jade" es una marca registrada, y como resultado, se necesita un cambio de nombre. Tras un breve debate entre los mantenedores, "Pug" ha sido elegido como el nuevo nombre para este proyecto. La próxima versión principal llevará a "pug", como el nombre del paquete. La documentación completa se encuentra en:&nbsp;
-      a(href='' + link target="_blank") https://github.com/pugjs/pug
-
-    section: h2 Configuración con gulp
-      div.b-img: img(src="../src/image/pug.png")
-
-    section: div.b-grillas
-      h2 Iteración
-      div.b-grillas
-        each val in items
-          +grilla(val)
-
-    footer: .b-info: p Instalación Pug aquí&nbsp;
-      a(href="https://pugjs.org/api/getting-started.html") pugjs.org/api/getting-started.html
+    include ./head.pug
+    include ./description.pug
+    include ./grilla.pug
+    include ./footer.pug
