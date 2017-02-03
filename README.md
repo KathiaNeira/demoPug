@@ -1,4 +1,4 @@
-<h1>PUG</h1>
+<h1>example Pug-gulp</h1>
 
 Pug configurado con gulp 
 https://github.com/pugjs/pug
